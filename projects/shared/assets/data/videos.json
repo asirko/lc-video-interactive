@@ -1,0 +1,45 @@
+[
+  {
+    "src": "/assets/mocks-videos/globe.mp4",
+    "name": "Test 1",
+    "id": 1,
+    "interactions": [
+      {
+        "type": "link",
+        "startTime": 10.5,
+        "name": "Test avec un lien",
+        "link": "https://www.alexandre.lets-code.fr/"
+      },
+      {
+        "type": "button",
+        "startTime": 20,
+        "name": "Revenir au début",
+        "goTo": 0
+      },
+      {
+        "type": "button",
+        "startTime": 0,
+        "endTime": 5,
+        "name": "Aller à 20 secondes",
+        "goTo": 20
+      },
+      {
+        "type": "text",
+        "startTime": 5,
+        "endTime": 10,
+        "text": "<span style=\"font-size: 1.5em\">Du texte <strong>avec mise en page</strong></span>",
+        "x": 10,
+        "y": 10,
+        "width": 50
+      },
+      {
+        "type": "image",
+        "startTime": 5,
+        "endTime": 10,
+        "src": "/assets/shared-assets/images/logo-GDG-1024x576.png",
+        "x": 10,
+        "y": 10
+      }
+    ]
+  }
+]

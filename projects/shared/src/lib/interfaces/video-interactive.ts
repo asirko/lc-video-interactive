@@ -13,25 +13,27 @@ export enum InteractionType {
   IMAGE = 'image',
 }
 
-export interface Interaction {
+interface AbstractInteraction {
   type: InteractionType;
   startTime: number;
 }
 
-export interface InteractionLink extends Interaction {
+export type Interaction = InteractionLink | InteractionButton | InteractionText | InteractionImage;
+
+export interface InteractionLink extends AbstractInteraction {
   type: InteractionType.LINK;
   link: string;
   name: string;
 }
 
-export interface InteractionButton extends Interaction {
+export interface InteractionButton extends AbstractInteraction {
   type: InteractionType.BUTTON;
   endTime: number;
   name: string;
   goTo: number;
 }
 
-export interface InteractionText extends Interaction {
+export interface InteractionText extends AbstractInteraction {
   type: InteractionType.TEXT;
   startTime: number;
   endTime: number;
@@ -42,7 +44,7 @@ export interface InteractionText extends Interaction {
   width: number;
 }
 
-export interface InteractionImage extends Interaction {
+export interface InteractionImage extends AbstractInteraction {
   type: InteractionType.IMAGE;
   startTime: number;
   endTime: number;

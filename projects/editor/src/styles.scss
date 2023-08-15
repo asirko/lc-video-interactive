@@ -1,12 +1,5 @@
-@import "remixicon/fonts/remixicon.css";
-@import "@fontsource/roboto";
+@import 'remixicon/fonts/remixicon.css';
+@import '@fontsource/roboto';
 
-@import "./styles/core/reset";
-@import "./styles/core/colors";
-@import "./styles/core/shapes";
-
-@import "./styles/modules/layout";
-@import "./styles/modules/buttons";
-@import "./styles/modules/tables";
-
-@import "./styles/modules/features";
+@import './styles/core';
+@import './styles/modules';

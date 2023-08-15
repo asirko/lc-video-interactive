@@ -1,7 +1,14 @@
 .feature-header {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--color-primary-darker);
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 2rem;
+
+  &.is-inline {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feature-header-back {
+    font-size: 1.1rem;
+  }
 }

@@ -1,1 +1,12 @@
-<p>video-editor works!</p>
+<div class="feature-header">
+  <a class="feature-header-back" routerLink="../..">
+    <i class="ri-arrow-go-back-line"></i>
+    Revenir à la liste
+  </a>
+  <h3 *ngIf="!videoId && videoId !== 0">Créez votre video interactive</h3>
+  <h3 *ngIf="videoId || videoId === 0">Modifiez votre video interactive</h3>
+</div>
+
+<div class="feature-body">
+  <button *ngIf="!form.value.src" (click)="selectVideo()">Veuillez sélectionner une vidéo</button>
+</div>

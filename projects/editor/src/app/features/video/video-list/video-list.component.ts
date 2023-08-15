@@ -1,5 +1,5 @@
 import { VideoService } from '../video.service';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -13,6 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export default class VideoListComponent {
   private readonly videoService = inject(VideoService);
+
+  @HostBinding('class') readonly cls = 'feature';
 
   readonly videos$ = this.videoService.videos$;
 

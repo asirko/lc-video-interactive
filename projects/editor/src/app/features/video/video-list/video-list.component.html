@@ -1,6 +1,6 @@
 <div class="feature-header">
   <h3>Vos vidéos interactive</h3>
-  <button>Créer une nouvelle vidéo</button>
+  <button routerLink="../editor/new">Créer une nouvelle vidéo</button>
 </div>
 
 <table>
@@ -15,9 +15,9 @@
     <td>{{ video.duration }}</td>
     <td>{{ video.interactions.length }}</td>
     <td>
-      <button class="ri-pencil-line ri-xl"></button>
-      <button class="ri-file-copy-line ri-xl"></button>
-      <button class="ri-delete-bin-line ri-xl"></button>
+      <button [routerLink]="['..', 'editor', video.id]" class="ri-pencil-line ri-xl"></button>
+      <button (click)="duplicateVideo(video.id)" class="ri-file-copy-line ri-xl"></button>
+      <button (click)="deleteVideo(video.id)" class="ri-delete-bin-line ri-xl"></button>
     </td>
   </tr>
 </table>

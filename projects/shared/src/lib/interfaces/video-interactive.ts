@@ -2,6 +2,7 @@ export interface VideoInteractive {
   src: string;
   name: string;
   id: number;
+  duration: number;
   interactions: Interaction[];
 }
 

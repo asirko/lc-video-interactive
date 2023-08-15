@@ -3,6 +3,7 @@
     "src": "/assets/mocks-videos/globe.mp4",
     "name": "Test 1",
     "id": 1,
+    "duration": 31,
     "interactions": [
       {
         "type": "link",

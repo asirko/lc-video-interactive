@@ -6,7 +6,6 @@ import { RouterOutlet } from '@angular/router';
   selector: 'lce-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './core.component.html',
-  styleUrls: ['./core.component.scss'],
+  template: `<router-outlet></router-outlet>`,
 })
 export class CoreComponent {}

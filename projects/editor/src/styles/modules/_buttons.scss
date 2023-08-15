@@ -1,0 +1,42 @@
+button {
+  background-color: var(--color-primary-darker);
+  border: none;
+  border-radius: var(--border-radius-s);
+  color: var(--color-white);
+  cursor: pointer;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--color-primary-darkest);
+  }
+
+  &:active {
+    background-color: var(--color-primary-darkest);
+  }
+
+  &:disabled {
+    background-color: var(--color-gray-darker);
+    cursor: not-allowed;
+  }
+}
+
+button[class^="ri-"] {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  padding: 0;
+
+  & + & {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    scale: 1.1;
+  }
+}

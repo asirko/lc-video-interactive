@@ -1,3 +1,23 @@
-<p>video-list works!</p>
+<div class="feature-header">
+  <h3>Vos vidéos interactive</h3>
+  <button>Créer une nouvelle vidéo</button>
+</div>
 
-{{ video$ | async | json }}
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Durée</th>
+    <th>Nombre d'intéractions</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let video of videos$ | async">
+    <td>{{ video.name }}</td>
+    <td>{{ video.duration }}</td>
+    <td>{{ video.interactions.length }}</td>
+    <td>
+      <button class="ri-pencil-line ri-xl"></button>
+      <button class="ri-file-copy-line ri-xl"></button>
+      <button class="ri-delete-bin-line ri-xl"></button>
+    </td>
+  </tr>
+</table>

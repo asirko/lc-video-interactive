@@ -13,5 +13,5 @@ import { CommonModule } from '@angular/common';
 export default class VideoListComponent {
   private readonly videoService = inject(VideoService);
 
-  readonly video$ = this.videoService.getVideos();
+  readonly videos$ = this.videoService.getVideos();
 }
